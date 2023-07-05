@@ -138,6 +138,7 @@ module.exports = {
       throw new TypeError(`${CONDA_INSTALL_DIR} not found, please reinstall "@pipcook/boa".`);
     }
     const condaPath = fs.readFileSync(CONDA_INSTALL_DIR, 'utf8');
+    console.log("condaPath", condaPath);
     if (!condaPath || !fs.existsSync(condaPath)) {
       this.run('rm', '-rf', CONDA_INSTALL_DIR);
       throw new TypeError(`invalid CONDA_INSTALL_DIR file, please reinstall "@pipcook/boa".`);
