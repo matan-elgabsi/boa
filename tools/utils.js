@@ -39,7 +39,7 @@ let {
    * The conda version to download from remote URL.
    * @string
    */
-  BOA_CONDA_VERSION = 'Miniconda3-4.11.0',
+  BOA_CONDA_VERSION = 'Miniconda3-py310_23.3.1-0',
   /**
    * The conda index URI, if `BOA_TUNA` is specified, it will be set.
    * @string
