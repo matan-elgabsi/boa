@@ -49,7 +49,7 @@ let {
    * The python library version, for example 3.7m
    * @string
    */
-  BOA_PYTHON_VERSION = '3.7m',
+  BOA_PYTHON_VERSION = '3.10',
   /**
    * Install the base packages: numpy/scikit/...
    */
