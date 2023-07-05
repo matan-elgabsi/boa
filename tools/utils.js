@@ -39,7 +39,7 @@ let {
    * The conda version to download from remote URL.
    * @string
    */
-  BOA_CONDA_VERSION = 'Miniconda3-4.7.12.1',
+  BOA_CONDA_VERSION = 'Miniconda3-4.11.0',
   /**
    * The conda index URI, if `BOA_TUNA` is specified, it will be set.
    * @string
@@ -163,6 +163,8 @@ module.exports = {
       downloaderName += '-x86_64';
     } else if (this.ARCH === 'ppc64') {
       downloaderName += '-ppc64le';
+    } else if (this.ARCH === 'arm64') {
+      downloaderName += '-arm64';
     } else {
       if (this.PLATFORM !== 'darwin') {
         downloaderName += '-x86';
