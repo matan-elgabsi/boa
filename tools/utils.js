@@ -165,7 +165,7 @@ module.exports = {
     } else if (this.ARCH === 'ppc64') {
       downloaderName += '-ppc64le';
     } else if (this.ARCH === 'arm64') {
-      downloaderName += '-arm64';
+      downloaderName += this.PLATFORM === 'linux' ? '-aarch64' : '-arm64';
     } else {
       if (this.PLATFORM !== 'darwin') {
         downloaderName += '-x86';
