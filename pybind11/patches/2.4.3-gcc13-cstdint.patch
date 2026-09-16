@@ -1,0 +1,10 @@
+--- pybind11-2.4.3/include/pybind11/detail/common.h	2019-10-15 02:57:24
++++ pybind11-2.4.3.new/include/pybind11/detail/common.h	2026-09-16 11:36:35
+@@ -132,6 +132,7 @@
+ #endif
+ 
+ #include <cstddef>
++#include <cstdint>
+ #include <cstring>
+ #include <forward_list>
+ #include <vector>

@@ -37,6 +37,8 @@ $(BUILD):
 	mv $(ARCHIVE_DIR) $(BUILD)
 	# apply patches
 	patch -u -b src/include/pybind11/pytypes.h -i patches/2.4.3-fix-object-destruct.patch
+	# GCC 13+ no longer includes <cstdint> transitively; pybind11 2.4.3 uses std::uint16_t without it
+	patch -u -b src/include/pybind11/detail/common.h -i patches/2.4.3-gcc13-cstdint.patch
 
 clean:
 	rm -rf $(BUILD)
